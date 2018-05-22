@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Converter</title>
+	<style type="text/css">
+		.greybg {background-color: lightgrey;
+					  border-style: solid;
+			 		  border-width: 2px;
+			 		  border-color: grey;
+			 		  width: 70px;
+			 		  margin-top: 10px;
+			 		  padding: 20px 10px; 
+					 }
+		.bluebg {border-style: solid none;
+					background-color: blue;
+					color:white;
+					margin-bottom: -16px;
+					margin-left: 2px;
+					width: 211px;
+					height: 40px;
+					padding: 1px;
+					text-align: center;
+				   }
+		.input {height: 20px;
+				padding: 5px;
+				border-radius: 5px;
+				box-sizing: border-radius;
+				border: 1px solid grey}
+	</style>
+
+<script type="text/javascript">
+	function convert(){
+value2.value = (sel.value=='mass1')? parseFloat(value1.value) * 1000 : alert('no');
+
+// : (sel.value=="mass1")?
+// (alert('no'))
+// conv=result.value;
+}
+// v2.value = (conv.value=='ctok')?
+</script>
+</head>
+<body>
+	<form>
+		<div class="bluebg">
+		<p>CONVERTER</p>
+	</div>
+	<fieldset class="greybg">
+		<center><select id="sel"></center>
+			<option>Select converter</option>
+			<option value="mass1">Mass kg to g</option>
+			<option value="mass2">Mass g to kg</option>
+			<option value="temp1">Temperature (c-f)</option>
+			<option value="temp2">Temperature (f-c)</option>
+			<option value="dst1">Distance (km-m)</option>
+			<option value="dst1">Distance (m-km)</option>
+		</select>
+	
+<input type="text" class="input" placeholder="Enter value here" name="grams" id="value1">
+<br>
+<input type="text" class="input" name="result" id="value2">
+<button onclick="convert()" id="conv">Convert</button>
+</fieldset>
+</form>
+</body>
+</html>
